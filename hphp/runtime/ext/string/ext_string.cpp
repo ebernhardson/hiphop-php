@@ -1866,6 +1866,11 @@ Variant WuManberReplacement::translate(String source) {
     return false;
   }
 
+  // all patterns are longer than the source
+  if (m > source.size()) {
+    return source;
+  }
+
   if (prefix.size() == 0) {
     initTables();
   }
